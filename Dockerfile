@@ -1,5 +1,5 @@
 FROM alpine:edge as BUILD
-RUN apk update && apk add build-base
+RUN apk update && apk add build-base curl
 COPY nsenter1.c ./
 RUN cc -Wall -static nsenter1.c -o /usr/bin/nsenter1
 
